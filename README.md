@@ -59,7 +59,7 @@ Final Response
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/document-rag-system.git
+git clone https://github.com/AnirudhFtw/Semantic-RAG-System.git
 
 cd document-rag-system
 ```
