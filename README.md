@@ -1,118 +1,171 @@
-# Document RAG System
+<div align="center">
 
-A full-stack Retrieval-Augmented Generation (RAG) system for intelligent document querying using FastAPI, Qdrant, SentenceTransformers, Groq LLMs, Streamlit, Docker, and Inngest.
+# 🚀 Document RAG System
 
----
+### AI-Powered Document Question Answering using RAG
 
-## Features
+<img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi" />
+<img src="https://img.shields.io/badge/Streamlit-Frontend-red?style=for-the-badge&logo=streamlit" />
+<img src="https://img.shields.io/badge/Qdrant-VectorDB-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Groq-LLM-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker" />
 
-- PDF upload and ingestion
-- Semantic vector search
-- AI-powered question answering
-- Context-aware retrieval
-- Streamlit frontend
-- FastAPI backend
-- Qdrant vector database
-- Groq LLM integration
-- Inngest async workflows
-- Dockerized deployment
+</div>
 
 ---
 
-## Tech Stack
+# 📌 Overview
 
-- FastAPI
-- Streamlit
-- Qdrant
-- SentenceTransformers
-- Groq API
-- Inngest
-- Docker
-- Python
+Document RAG System is a full-stack Retrieval-Augmented Generation (RAG) application that allows users to:
+
+- 📄 Upload PDF documents
+- 🔍 Perform semantic search
+- 🤖 Ask AI-powered questions about documents
+- ⚡ Get context-aware answers using LLMs
+
+The system uses:
+- **FastAPI** for backend APIs
+- **Qdrant** as vector database
+- **SentenceTransformers** for embeddings
+- **Groq LLMs** for response generation
+- **Streamlit** for frontend UI
+- **Inngest** for async workflows
+- **Docker** for containerization
 
 ---
 
-## Architecture
+# 🏗️ Architecture
 
 ```text
-PDF
- ↓
+PDF Upload
+    ↓
 Chunking
- ↓
+    ↓
 Embeddings
- ↓
+    ↓
 Qdrant Vector DB
- ↓
+    ↓
 Semantic Retrieval
- ↓
+    ↓
 Groq LLM
- ↓
-Final Answer
+    ↓
+Final Response
+```
 
-Installation
-1. Clone Repository
+---
+
+# ⚙️ Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/YOUR_USERNAME/document-rag-system.git
+
 cd document-rag-system
-2. Create Virtual Environment
-python -m venv .venv
+```
 
-Activate environment:
+---
 
-Windows
-.venv\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
-Environment Variables
+## 2️⃣ Add Environment Variables
 
-Create a .env file:
+Create a `.env` file in the root directory:
 
+```env
 GROQ_API_KEY=your_groq_api_key
-Running Qdrant
+```
 
-Run Qdrant using Docker:
+---
 
+# 🐳 Run the Application
+
+## Start Qdrant
+
+```bash
 docker run -p 6333:6333 qdrant/qdrant
-Running FastAPI Backend
-uvicorn main:app --reload
+```
 
-Backend runs on:
+---
 
-http://127.0.0.1:8000
-Running Streamlit Frontend
-streamlit run app.py
+## Build Docker Image
 
-Frontend runs on:
-
-http://localhost:8501
-Running Inngest Dev Server
-npx inngest-cli@latest dev -u http://127.0.0.1:8000/api/inngest --no-discovery
-Dockerization
-
-Build Docker image:
-
+```bash
 docker build -t document-rag-system .
+```
 
-Run container:
+---
 
+## Run Docker Container
+
+```bash
 docker run -p 8000:8000 -p 8501:8501 --env-file .env document-rag-system
-API Endpoints
-Query Documents
-POST /query
+```
 
-Example request:
+---
 
-{
-  "question": "What is this document about?",
-  "top_k": 5
-}
-Future Improvements
-Hybrid search
-Reranking
-Source citations
-Multi-document support
-Authentication
-Chat memory
-Cloud deployment
-Author
+# ⚡ Run Inngest Dev Server
 
-Anirudh Gupta
+```bash
+npx inngest-cli@latest dev -u http://127.0.0.1:8000/api/inngest --no-discovery
+```
+
+---
+
+# 🌐 Access the App
+
+## Streamlit Frontend
+
+```text
+http://localhost:8501
+```
+
+## FastAPI Docs
+
+```text
+http://localhost:8000/docs
+```
+
+---
+
+# ✨ Features
+
+- 📄 PDF ingestion
+- 🔍 Semantic vector search
+- 🤖 AI-powered question answering
+- ⚡ Context-aware retrieval
+- 🧠 Vector embeddings
+- 🐳 Dockerized deployment
+- 🔄 Async ingestion workflows
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| FastAPI | Backend APIs |
+| Streamlit | Frontend UI |
+| Qdrant | Vector Database |
+| SentenceTransformers | Embeddings |
+| Groq | LLM Inference |
+| Inngest | Async Workflows |
+| Docker | Containerization |
+
+---
+
+# 🚀 Future Improvements
+
+- Hybrid Search
+- Reranking
+- Source Citations
+- Multi-document Support
+- Authentication
+- Chat Memory
+- Cloud Deployment
+
+---
+
+<div align="center">
+
+## ⭐ If you liked the project, consider giving it a star!
+
+</div>
