@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Document RAG System
+#  Semantic RAG System
 
 ### AI-Powered Document Question Answering using RAG
 
