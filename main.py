@@ -53,10 +53,7 @@ llm = OpenAI(
         event="rag/ingest_pdf"
     ),
 
-    throttle=inngest.Throttle(
-        limit=2,
-        period=60
-    )
+   
 )
 async def rag_ingest_pdf(ctx: inngest.Context):
 
